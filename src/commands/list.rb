@@ -11,7 +11,8 @@ module Commands
     EXPRESSIONS = T.let({
                           add_item: /\Ascribe\\ add\b/,
                           check_project: /\Ascribe\\ \\-\\-project\b/,
-                          create_project: /\Ascribe\\ init\b/
+                          create_project: /\Ascribe\\ init\b/,
+                          list_items: /\Ascribe\\ \\-\\-list\b/
                         }, T::Hash[T.untyped, T.untyped])
 
     sig { returns(T::Array[Symbol]) }

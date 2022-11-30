@@ -8,6 +8,7 @@ require_relative '../data'
 require_relative './add_item'
 require_relative './check_project'
 require_relative './create_project'
+require_relative './list_items'
 
 module Operations
   # Calls the operation based on the command
