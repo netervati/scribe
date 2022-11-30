@@ -1,10 +1,7 @@
 # frozen_string_literal: true
 # typed: true
 
-require 'json'
 require 'sorbet-runtime'
-
-require_relative '../output/standard'
 
 module Validation
   # Validation layer for the add item class
