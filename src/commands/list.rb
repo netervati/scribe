@@ -9,6 +9,7 @@ module Commands
     extend T::Sig
 
     EXPRESSIONS = T.let({
+                          add_item: /\Ascribe\\ add\b/,
                           check_project: /\Ascribe\\ \\-\\-project\b/,
                           create_project: /\Ascribe\\ init\b/
                         }, T::Hash[T.untyped, T.untyped])

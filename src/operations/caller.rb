@@ -5,6 +5,7 @@ require 'sorbet-runtime'
 
 require_relative '../config/string'
 require_relative '../data'
+require_relative './add_item'
 require_relative './check_project'
 require_relative './create_project'
 

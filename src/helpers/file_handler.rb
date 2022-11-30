@@ -18,7 +18,7 @@ module Helpers
     def self.create_project_file(project_name)
       file = File.new("./project/#{project_name}.json", 'w')
 
-      file.puts(JSON.dump({ name: project_name }))
+      file.puts(JSON.dump({ name: project_name, list: [] }))
 
       file.close
     end
@@ -32,6 +32,26 @@ module Helpers
       end
 
       exists
+    end
+
+    sig { params(file_name: String).returns(T::Hash[T.untyped, T.untyped]) }
+    def self.read_project_contents(file_name)
+      file = File.open("./project/#{file_name}.json")
+
+      contents = file.read
+
+      file.close
+
+      JSON.parse(contents).transform_keys(&:to_sym)
+    end
+
+    sig { params(file_name: String, content: T::Hash[T.untyped, T.untyped]).returns(NilClass) }
+    def self.update_project_contents(file_name, content)
+      file = File.open("./project/#{file_name}.json", 'w')
+
+      file.puts(JSON.dump(content))
+
+      file.close
     end
   end
 end
