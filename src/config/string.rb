@@ -18,6 +18,11 @@ class String
   end
 
   sig { returns(String) }
+  def highlight_magenta
+    "\e[45m#{self}\e[0m"
+  end
+
+  sig { returns(String) }
   def highlight_red
     "\e[41m#{self}\e[0m"
   end
