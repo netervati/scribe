@@ -14,11 +14,7 @@ module Operations
 
     sig { returns(NilClass) }
     def run
-      if @data.with_project?
-        list_items
-
-        return nil
-      end
+      return list_items if @data.with_project?
 
       puts 'No opened project yet.'
     end
