@@ -1,12 +1,10 @@
 # frozen_string_literal: true
-# frozen_string_literal: true
 # typed: strict
 
 require 'sorbet-runtime'
 
 require_relative './base'
 require_relative '../helpers/file_handler'
-require_relative '../output/standard'
 require_relative '../validation/add_item'
 
 module Operations
