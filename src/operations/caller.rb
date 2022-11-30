@@ -22,8 +22,8 @@ module Operations
     end
     def self.run(data:, line:, operation:)
       Operations.const_get(operation.to_s.pascalize).new(
-        input: line,
-        params: data
+        data: data,
+        input: line
       ).run
     end
   end

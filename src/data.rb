@@ -21,4 +21,11 @@ class Data
       instance_variable_set("@#{key}", val)
     end
   end
+
+  # Traits
+
+  sig { returns(T::Boolean) }
+  def with_project?
+    !@project_cursor.strip.empty?
+  end
 end

@@ -13,7 +13,7 @@ module Operations
 
     sig { returns(NilClass) }
     def run
-      return display_project if @params.instance_variable_defined?(:@project_cursor)
+      return display_project if @data.with_project?
 
       puts 'No opened project yet.'
     end
@@ -22,7 +22,7 @@ module Operations
 
     sig { returns(NilClass) }
     def display_project
-      puts @params.project_cursor
+      puts @data.project_cursor
     end
   end
 end

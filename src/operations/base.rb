@@ -10,10 +10,10 @@ module Operations
   class Base
     extend T::Sig
 
-    sig { params(input: String, params: Data).void }
-    def initialize(input:, params:)
+    sig { params(data: Data, input: String).void }
+    def initialize(data:, input:)
+      @data = data
       @input = input
-      @params = params
     end
   end
 end
