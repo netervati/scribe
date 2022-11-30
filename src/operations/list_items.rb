@@ -25,8 +25,8 @@ module Operations
     def list_items
       puts
       puts "  #{retrieve_project[:name].highlight_magenta}"
-      retrieve_project[:list].each do |item|
-        puts "  [ ] #{item['description']}"
+      retrieve_project[:list].each_with_index do |item, idx|
+        puts "  [ ] #{idx + 1} - #{item['description']}"
       end
       puts
     end
