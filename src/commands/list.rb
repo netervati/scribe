@@ -10,6 +10,7 @@ module Commands
 
     EXPRESSIONS = T.let({
                           add_item: /\Ascribe\\ add\b/,
+                          check_item: /\Ascribe\\ check\b/,
                           check_project: /\Ascribe\\ \\-\\-project\b/,
                           create_project: /\Ascribe\\ init\b/,
                           list_items: /\Ascribe\\ \\-\\-list\b/,
