@@ -4,6 +4,7 @@
 require 'sorbet-runtime'
 
 require_relative './base'
+require_relative '../config/string'
 require_relative '../helpers/file_handler'
 require_relative '../output/standard'
 
@@ -26,7 +27,8 @@ module Operations
       puts
       puts "  #{retrieve_project[:name].highlight_magenta}"
       retrieve_project[:list].each_with_index do |item, idx|
-        puts "  [ ] #{idx + 1} - #{item['description']}"
+        check_box = item['completed'] == true ? '[X]'.green : '[ ]'
+        puts "  #{check_box} #{idx + 1} - #{item['description']}"
       end
       puts
     end
