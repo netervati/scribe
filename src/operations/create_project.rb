@@ -6,7 +6,7 @@ require 'sorbet-runtime'
 require_relative './base'
 require_relative '../helpers/file_handler'
 require_relative '../output/standard'
-require_relative '../validations/create_project'
+require_relative '../validations/check_project_name'
 
 module Operations
   # Responsible for creating the Scribe project
@@ -26,7 +26,7 @@ module Operations
 
     sig { returns(T.nilable(String)) }
     def validate
-      validation_error = Validations::CreateProject.new(@input).validate
+      validation_error = Validations::CheckProjectName.new(@input).validate
 
       return validation_error unless validation_error.nil?
 

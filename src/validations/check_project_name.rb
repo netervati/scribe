@@ -4,8 +4,8 @@
 require 'sorbet-runtime'
 
 module Validations
-  # Validation layer for the create project class
-  class CreateProject
+  # Validation layer for the create and delete project class
+  class CheckProjectName
     extend T::Sig
 
     sig { params(subject: String).void }
