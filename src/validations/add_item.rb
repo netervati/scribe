@@ -22,7 +22,7 @@ module Validations
 
     sig { returns(T::Boolean) }
     def unwrapped_text
-      description.split('').first != '"' || description.split('').last != '"'
+      description.chars.first != '"' || description.chars.last != '"'
     end
 
     sig { returns(String) }
