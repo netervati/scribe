@@ -11,6 +11,7 @@ require_relative './check_project'
 require_relative './create_project'
 require_relative './list_items'
 require_relative './open_project'
+require_relative './uncheck_item'
 
 module Operations
   # Calls the operation based on the command

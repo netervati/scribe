@@ -14,7 +14,8 @@ module Commands
                           check_project: /\Ascribe\\ \\-\\-project\b/,
                           create_project: /\Ascribe\\ init\b/,
                           list_items: /\Ascribe\\ \\-\\-list\b/,
-                          open_project: /\Ascribe\\ open\b/
+                          open_project: /\Ascribe\\ open\b/,
+                          uncheck_item: /\Ascribe\\ uncheck\b/
                         }, T::Hash[T.untyped, T.untyped])
 
     sig { returns(T::Array[Symbol]) }
