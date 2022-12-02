@@ -35,6 +35,10 @@ $ ruby app.rb
 ```bash
 >> scribe uncheck "<item-number>" 
 ```
+- Remove to-do item
+```bash
+>> scribe remove "<item-number>" 
+```
 - List items in project
 ```bash
 >> scribe --list
