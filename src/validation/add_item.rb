@@ -3,7 +3,7 @@
 
 require 'sorbet-runtime'
 
-module Validation
+module Validations
   # Validation layer for the add item class
   class AddItem
     extend T::Sig

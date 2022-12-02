@@ -27,7 +27,7 @@ module Operations
     def validate
       return 'Please create a project first.' unless @data.with_project?
 
-      Validation::AddItem.new(@input).validate
+      Validations::AddItem.new(@input).validate
     end
 
     sig { returns(NilClass) }

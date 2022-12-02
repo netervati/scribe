@@ -3,7 +3,7 @@
 
 require 'sorbet-runtime'
 
-module Validation
+module Validations
   # Validation layer for the create project class
   class CreateProject
     extend T::Sig

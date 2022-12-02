@@ -28,7 +28,7 @@ module Operations
 
       return 'The project has no item yet.' unless contents[:list].length.positive?
 
-      validation_error = Validation::CheckItem.new(@input).validate
+      validation_error = Validations::CheckItem.new(@input).validate
 
       return validation_error unless validation_error.nil?
 

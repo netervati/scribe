@@ -3,7 +3,7 @@
 
 require 'sorbet-runtime'
 
-module Validation
+module Validations
   # Validation layer for the open project class
   class OpenProject
     extend T::Sig

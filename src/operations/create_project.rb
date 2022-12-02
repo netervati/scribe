@@ -26,7 +26,7 @@ module Operations
 
     sig { returns(T.nilable(String)) }
     def validate
-      validation_error = Validation::CreateProject.new(@input).validate
+      validation_error = Validations::CreateProject.new(@input).validate
 
       return validation_error unless validation_error.nil?
 
