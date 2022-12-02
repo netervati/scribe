@@ -15,6 +15,7 @@ module Commands
                           create_project: /\Ascribe\\ init\b/,
                           list_items: /\Ascribe\\ \\-\\-list\b/,
                           open_project: /\Ascribe\\ open\b/,
+                          remove_item: /\Ascribe\\ remove\b/,
                           uncheck_item: /\Ascribe\\ uncheck\b/
                         }, T::Hash[T.untyped, T.untyped])
 
