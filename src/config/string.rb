@@ -9,7 +9,7 @@ class String
 
   sig { returns(String) }
   def pascalize
-    split(/ |_|-/).map(&:capitalize).join('')
+    split(/ |_|-/).map(&:capitalize).join
   end
 
   sig { returns(String) }
