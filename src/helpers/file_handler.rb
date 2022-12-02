@@ -23,6 +23,11 @@ module Helpers
       file.close
     end
 
+    sig { params(project_name: String).void }
+    def self.delete_project_file(project_name)
+      File.delete("./project/#{project_name}.json")
+    end
+
     sig { params(file_name: String).returns(T::Boolean) }
     def self.project_exist?(file_name)
       exists = T.let(false, T::Boolean)

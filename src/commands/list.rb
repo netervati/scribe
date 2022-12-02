@@ -13,6 +13,7 @@ module Commands
                           check_item: /\Ascribe\\ check\b/,
                           check_project: /\Ascribe\\ \\-\\-project\b/,
                           create_project: /\Ascribe\\ init\b/,
+                          delete_project: /\Ascribe\\ delete\b/,
                           list_items: /\Ascribe\\ \\-\\-list\b/,
                           open_project: /\Ascribe\\ open\b/,
                           remove_item: /\Ascribe\\ remove\b/,
