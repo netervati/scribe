@@ -4,7 +4,7 @@
 require 'sorbet-runtime'
 
 require_relative './base'
-require_relative '../validations/check_item'
+require_relative '../validations/toggle_item'
 
 module Operations
   # Completes the to-do item
@@ -28,7 +28,7 @@ module Operations
 
       return 'The project has no item yet.' unless contents[:list].length.positive?
 
-      validation_error = Validations::CheckItem.new(@input).validate
+      validation_error = Validations::ToggleItem.new(@input).validate
 
       return validation_error unless validation_error.nil?
 

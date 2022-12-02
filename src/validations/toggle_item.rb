@@ -4,8 +4,8 @@
 require 'sorbet-runtime'
 
 module Validations
-  # Validation layer for the check item class
-  class CheckItem
+  # Validation layer for the check and uncheck item classes
+  class ToggleItem
     extend T::Sig
 
     sig { params(subject: String).void }
@@ -26,7 +26,7 @@ module Validations
 
     sig { returns(T::Boolean) }
     def number?
-      return true if T.must(@subject.split[2]).to_i > 0
+      return true if T.must(@subject.split[2]).to_i.positive?
 
       false
     rescue StandardError
