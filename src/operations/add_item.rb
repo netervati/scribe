@@ -5,7 +5,7 @@ require 'sorbet-runtime'
 
 require_relative './base'
 require_relative '../helpers/file_handler'
-require_relative '../validation/add_item'
+require_relative '../validations/add_item'
 
 module Operations
   # Adds a to-do item on the project

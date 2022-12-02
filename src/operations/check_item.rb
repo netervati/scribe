@@ -4,7 +4,7 @@
 require 'sorbet-runtime'
 
 require_relative './base'
-require_relative '../validation/check_item'
+require_relative '../validations/check_item'
 
 module Operations
   # Completes the to-do item

@@ -6,7 +6,7 @@ require 'sorbet-runtime'
 require_relative './base'
 require_relative '../helpers/file_handler'
 require_relative '../output/standard'
-require_relative '../validation/open_project'
+require_relative '../validations/open_project'
 
 module Operations
   # Opens a project based on the inputted project name

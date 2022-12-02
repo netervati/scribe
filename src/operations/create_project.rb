@@ -6,7 +6,7 @@ require 'sorbet-runtime'
 require_relative './base'
 require_relative '../helpers/file_handler'
 require_relative '../output/standard'
-require_relative '../validation/create_project'
+require_relative '../validations/create_project'
 
 module Operations
   # Responsible for creating the Scribe project
